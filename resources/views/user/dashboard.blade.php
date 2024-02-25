@@ -35,6 +35,9 @@
                             <li class="list-group-item">
                                 <strong>Phone Number:</strong> {{ $user->phoneNumber }}
                             </li>
+                            <li class="list-group-item">
+                                <strong>status:</strong> {{ $user->status }}
+                            </li>
                             <!-- Add more user details as needed -->
                         </ul>
                     </div>

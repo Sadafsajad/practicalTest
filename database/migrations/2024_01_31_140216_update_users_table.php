@@ -17,8 +17,8 @@ class UpdateUsersTable extends Migration
         Schema::table('users', function (Blueprint $table) {
             $table->string('lastname')->after('firstname')->nullable();
             $table->string('phoneNumber')->after('lastname')->nullable();
-            $table->string('postcode')->after('phoneNumber')->nullable();
-            $table->string('state')->after('postcode')->nullable();
+            $table->string('status')->after('phoneNumber')->nullable();
+            $table->string('state')->after('status')->nullable();
             $table->string('city')->after('state')->nullable();
             $table->text('hobbies')->after('city')->nullable();
             $table->string('gender')->after('hobbies')->nullable();

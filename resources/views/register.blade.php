@@ -50,9 +50,13 @@
                     </div>
                     <div class="row mb-3">
                         <div class="col">
-                            <label for="postcode" class="form-label">Postcode:</label>
-                            <input type="text" name="postcode" id="postcode" required class="form-control mb-3">
-                        </div>
+                            <label for="status" class="form-label">Status:</label>
+                                <select name="status" id="status" class="form-select">
+                                    <option value="pending">pending</option>
+                                    <option value="inprogress">inprogress</option>
+                                    <option value="completed">completed</option>
+                                </select>
+                            </div>
                         <div class="col">
                             <div class="form-group mb-3">
                                 <label for="role" class="form-label">Role</label>
@@ -169,7 +173,7 @@
                         required: true,
                         number: true,
                     },
-                    postcode: {
+                    status: {
                         required: true,
                     },
                     password: {
@@ -204,8 +208,8 @@
                         required: "Please enter your contact number",
                         number: "Please enter a valid contact number",
                     },
-                    postcode: {
-                        required: "Please enter your postcode",
+                    status: {
+                        required: "Please enter your status",
                     },
                     password: {
                         required: "Please enter your password",
@@ -242,7 +246,7 @@
                 formData.append('lastname', $('#lastname').val());
                 formData.append('email', $('#email').val());
                 formData.append('phoneNumber', $('#phoneNumber').val());
-                formData.append('postcode', $('#postcode').val());
+                formData.append('status', $('#status').val());
                 formData.append('role', $('#role').val());
                 formData.append('password', $('#password').val());
                 formData.append('confirm_password', $('#confirm_password').val());

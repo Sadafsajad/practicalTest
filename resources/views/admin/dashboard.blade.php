@@ -24,6 +24,7 @@
                 <th>Name</th>
                 <th>Email</th>
                 <th>Phone Number</th>
+                <th>status</th>
                 <th>Options</th>
             </tr>
         </thead>
@@ -33,6 +34,7 @@
                     <td>{{ $user->firstname }}</td>
                     <td>{{ $user->email }}</td>
                     <td>{{ $user->phoneNumber }}</td>
+                    <td>{{ $user->status }}</td>
                     <td>
                         <!-- Edit Icon (Assuming you have an edit route) -->
                         <a href="{{ route('edit.user', ['id' => $user->id]) }}" class="btn btn-warning btn-sm"><i class="bi bi-pencil"></i> Edit</a>

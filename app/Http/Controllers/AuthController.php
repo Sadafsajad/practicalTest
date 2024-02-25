@@ -63,7 +63,7 @@ class AuthController extends Controller
         'lastname' => 'required|alpha',
         'email' => 'required|email|unique:users',
         'phoneNumber' => 'required|numeric',
-        'postcode' => 'required',
+        'status' => 'required',
         'role' => 'required|in:1,2', // Ensure the role is either 1 or 2
         'password' => 'required|min:6',
         'confirm_password' => 'required|same:password',
@@ -82,7 +82,7 @@ class AuthController extends Controller
             'lastname' => $request->input('lastname'),
             'email' => $request->input('email'),
             'phoneNumber' => $request->input('phoneNumber'),
-            'postcode' => $request->input('postcode'),
+            'status' => $request->input('status'),
             'password' => bcrypt($request->input('password')),
             'hobbies' => $request->input('hobbies'),
             'state' => $request->input('state'),

@@ -18,7 +18,7 @@ class AdminController extends Controller
         $users = DB::table('users')
             ->join('roles_user', 'users.id', '=', 'roles_user.user_id')
             ->where('roles_user.role_id', 2)
-            ->select('users.id','users.firstname', 'users.email', 'users.phoneNumber')
+            ->select('users.id','users.firstname', 'users.email', 'users.phoneNumber', 'users.status')
             ->get();
         
         // Pass the data to the view
@@ -46,6 +46,7 @@ class AdminController extends Controller
         $user = User::find($id);
         $user->firstname = $request->input('firstname');
         $user->phoneNumber = $request->input('phoneNumber');
+        $user->status = $request->input('status');
         // Update other fields as needed
         $user->save();
 
